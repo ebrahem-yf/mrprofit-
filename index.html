@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MRP | خبراء SEO وGoogle Ads وMerchant Center</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b0a6e;--blue:#1d4ed8;--sky:#38bdf8;--ink:#0f172a;--mut:#475569;--bg:#fff;--soft:#f1f5ff;--seo:#059669;--seo2:#ecfdf5;--css:#7c3aed;--css2:#f5f3ff;--gold:#fbbf24;color-scheme:light}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{font-family:Cairo,Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.w{max-width:1100px;margin:auto;padding:0 20px}
+section{padding:80px 0;position:relative;overflow:hidden}
+h2{font-size:clamp(26px,4.5vw,40px);font-weight:900;line-height:1.35;margin-bottom:14px}
+.lead{color:var(--mut);max-width:680px;font-size:17px}
+.btn{display:inline-block;background:var(--blue);color:#fff;padding:13px 28px;border-radius:50px;font-weight:800;border:0;cursor:pointer;font:inherit;font-weight:800;transition:.25s;box-shadow:0 8px 22px #1d4ed855}
+.btn:hover{transform:translateY(-3px)}
+.btn.o{background:#fff;color:var(--navy);box-shadow:none;border:2px solid #fff3}
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:#fff;box-shadow:0 2px 18px #0001}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#fff;z-index:60}
+.hd{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-weight:900;font-size:30px;color:var(--navy);letter-spacing:-1px;font-family:Arial Black,Cairo,sans-serif;direction:ltr}
+nav{display:flex;gap:26px;align-items:center;font-weight:700}
+nav a,nav button{background:none;border:0;font:inherit;font-weight:700;color:var(--ink);cursor:pointer;padding:8px 0}
+nav a:hover,nav button:hover{color:var(--blue)}
+.dd{position:relative}
+.dd>div{position:absolute;top:100%;right:0;background:#fff;min-width:200px;border-radius:14px;box-shadow:0 14px 40px #0002;padding:8px;opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s}
+.dd:hover>div,.dd.open>div{opacity:1;visibility:visible;transform:none}
+.dd>div a{display:block;padding:8px 14px;border-radius:10px}
+.dd>div a:hover{background:var(--soft)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger i{display:block;height:3px;background:var(--navy);margin:6px 8px;border-radius:3px}
+/* hero */
+.hero{background:linear-gradient(160deg,#07065a,#1d1ab8 60%,#2563eb);color:#fff;padding:90px 0 70px}
+.hero h1{font-size:clamp(32px,6vw,58px);font-weight:900;line-height:1.3;margin-bottom:16px}
+.hero p{font-size:19px;opacity:.9;max-width:600px}
+.hero .cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:50px}
+.stat{background:#ffffff14;border:1px solid #ffffff30;backdrop-filter:blur(6px);border-radius:18px;padding:20px;text-align:center}
+.stat b{display:block;font-size:clamp(28px,5vw,44px);font-weight:900;color:var(--gold);direction:ltr}
+.orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.45;animation:fl 9s ease-in-out infinite}
+@keyframes fl{50%{transform:translate(30px,-30px)}}
+/* seo */
+#seo{background:var(--seo2)}
+#seo h2 span{color:var(--seo)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.panel{background:#fff;border-radius:22px;padding:22px;box-shadow:0 18px 50px #05966922}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tag{font-size:13px;font-weight:800;padding:4px 12px;border-radius:20px;background:#e0f2fe;color:#0369a1;direction:ltr}
+.tag.s{background:#ffedd5;color:#c2410c}
+.bars{display:flex;align-items:flex-end;gap:8px;height:150px;border-bottom:2px solid #e2e8f0;margin:12px 0}
+.bars i{flex:1;background:linear-gradient(var(--seo),#6ee7b7);border-radius:6px 6px 0 0;height:0;transition:height 1.4s cubic-bezier(.2,.8,.2,1)}
+.vis .bars i{height:var(--h)}
+.kp{display:flex;justify-content:space-between;gap:10px;text-align:center}
+.kp b{display:block;font-size:26px;color:var(--seo);direction:ltr;font-weight:900}
+.pill{display:inline-block;background:var(--seo);color:#fff;border-radius:50px;padding:6px 18px;font-weight:800;margin-top:14px}
+svg .ln{stroke-dasharray:600;stroke-dashoffset:600;transition:stroke-dashoffset 2.2s .3s}
+.vis svg .ln{stroke-dashoffset:0}
+.pulse{animation:pu 2s infinite}@keyframes pu{50%{transform:scale(1.08)}}
+/* ads */
+#ads{background:#fff}
+.gl{position:absolute;font-weight:900;font-size:140px;opacity:.06;color:var(--blue);animation:fl 12s infinite;pointer-events:none;font-family:Arial,sans-serif}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:34px 0}
+.card{background:var(--soft);border-radius:20px;padding:24px;text-align:center;border:1px solid #dbe4ff}
+.card b{display:block;font-size:38px;color:var(--blue);font-weight:900;direction:ltr}
+/* merchant */
+#gmc{background:linear-gradient(180deg,#f1f5ff,#e0e9ff)}
+.tagic{position:absolute;font-size:110px;opacity:.1;animation:sw 7s ease-in-out infinite;pointer-events:none}
+@keyframes sw{50%{transform:rotate(14deg) translateY(-20px)}}
+.chk{list-style:none;padding:0;display:grid;gap:12px;margin-top:20px}
+.chk li{background:#fff;border-radius:14px;padding:14px 18px;box-shadow:0 6px 18px #1d4ed814;font-weight:600}
+.chk li::before{content:"✔";color:var(--blue);margin-left:10px;font-weight:900}
+/* css */
+#css{background:var(--css2)}
+#css h2 span{color:var(--css)}
+.bell{font-size:74px;display:inline-block;transform-origin:top center;animation:ring 2.4s ease-in-out infinite}
+@keyframes ring{0%,100%{transform:rotate(0)}10%{transform:rotate(18deg)}20%{transform:rotate(-16deg)}30%{transform:rotate(12deg)}40%{transform:rotate(-8deg)}50%{transform:rotate(0)}}
+.tree{font-size:56px;animation:tw 1.6s infinite}@keyframes tw{50%{filter:drop-shadow(0 0 16px #fbbf24) brightness(1.3);transform:scale(1.1)}}
+.sl{font-size:50px;animation:lr 3s ease-in-out infinite;display:inline-block}@keyframes lr{50%{transform:translateX(-40px)}}
+.anim{display:flex;gap:34px;align-items:flex-end;margin-top:22px;flex-wrap:wrap}
+.mets{margin-top:26px;display:grid;gap:14px;max-width:420px}
+.mets span{font-weight:800;font-size:15px}
+.mets em{display:block;height:8px;background:#e9e3ff;border-radius:8px;margin-top:6px;overflow:hidden}
+.mets u{display:block;height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--css),#a78bfa);transition:width 1.6s cubic-bezier(.2,.8,.2,1) .3s}
+.vis .mets u{width:var(--w)}
+.mock{background:#fff;border-radius:20px;padding:20px;box-shadow:0 18px 50px #7c3aed22}
+.mock .bar{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--css),#c4b5fd);margin:10px 0;animation:ld 3s infinite alternate}
+@keyframes ld{from{width:35%}to{width:95%}}
+/* clients */
+.mq{overflow:hidden;margin-top:34px;direction:ltr;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mt{display:flex;gap:18px;width:max-content;animation:mq 28s linear infinite}
+.mq:hover .mt{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.lg{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #dbe4ff;border-radius:16px;padding:14px 24px;font-weight:900;font-size:20px;white-space:nowrap;box-shadow:0 6px 18px #1d4ed814}
+.lg img{height:38px;width:auto;display:block}
+.lg{padding:12px 26px;gap:12px;font-size:19px}
+.lg i{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;color:#fff;font-style:normal;font-size:18px;font-weight:900}
+/* form */
+#contact{background:linear-gradient(160deg,#07065a,#1d1ab8)}
+#contact h2,#contact .lead{color:#fff}
+form{background:#fff;border-radius:24px;padding:30px;max-width:560px;margin:30px auto 0;box-shadow:0 20px 60px #0006}
+label{display:block;font-weight:800;margin:12px 0 5px}
+input,textarea{width:100%;font:inherit;padding:12px 16px;border:2px solid #e2e8f0;border-radius:14px;background:#f8fafc;color:var(--ink)}
+input:focus,textarea:focus{outline:0;border-color:var(--blue);background:#fff}
+form .btn{width:100%;margin-top:20px;font-size:18px}
+.note{text-align:center;color:var(--mut);font-size:14px;margin-top:10px}
+/* footer */
+footer{background:#050446;color:#cbd5e1;padding:50px 0 24px;text-align:center}
+footer .logo{color:#fff}
+footer .fl{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin:22px 0}
+footer .fl button{background:none;border:0;color:#cbd5e1;font:inherit;cursor:pointer}
+footer .fl button:hover{color:#fff}
+/* modal */
+.ov{position:fixed;inset:0;background:#0b0a3d66;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.ov.on{display:flex}
+.md{background:#fff;border-radius:24px;max-width:640px;width:100%;max-height:84vh;overflow:auto;padding:32px;animation:pop .35s cubic-bezier(.2,1.3,.4,1)}
+@keyframes pop{from{opacity:0;transform:scale(.8)}}
+.md h3{font-size:26px;font-weight:900;color:var(--navy);margin-bottom:10px}
+.md p{color:var(--mut);margin-bottom:10px}
+.x{float:left;background:var(--soft);border:0;width:38px;height:38px;border-radius:50%;font-size:20px;cursor:pointer}
+.row{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.wa{background:#25d366;box-shadow:0 8px 22px #25d36655}
+.ig{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af)}
+.fab{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));left:18px;z-index:70;background:#25d366;color:#fff;border-radius:50px;padding:10px 18px;font-weight:800;box-shadow:0 8px 24px #0004;display:flex;gap:8px;align-items:center;font-size:15px;direction:ltr}
+.fab{width:60px;height:60px;padding:0;justify-content:center;border-radius:50%}
+.rv{opacity:0;transform:translateY(24px);transition:.8s}.vis .rv,.rv.vis{opacity:1;transform:none}
+@media(max-width:800px){
+.burger{display:block}
+nav{position:absolute;top:68px;right:0;left:0;background:#fff;flex-direction:column;align-items:stretch;padding:10px 20px 20px;gap:0;box-shadow:0 14px 30px #0002;display:none}
+nav.on{display:flex}
+.dd>div{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;display:none;padding:0 12px}
+.dd.open>div{display:block}
+.grid2,.cards,.stats{grid-template-columns:1fr}
+.stats{grid-template-columns:repeat(3,1fr)}.stat{padding:12px 4px;font-size:13px}
+section{padding:60px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="w hd">
+<a class="logo" href="#top">MRP</a>
+<button class="burger" aria-label="القائمة" onclick="document.getElementById('nv').classList.toggle('on')"><i></i><i></i><i></i></button>
+<nav id="nv">
+<div class="dd" id="dd"><button onclick="document.getElementById('dd').classList.toggle('open')">خدماتنا ▾</button>
+<div><a href="#seo">خدمات السيو</a><a href="#ads">خدمات غوغل ادز</a><a href="#gmc">خدمات غوغل ميرشنت</a><a href="#css">خدمات CSS</a></div></div>
+<a href="#clients">عملاؤنا</a>
+<button onclick="M('about')">من نحن</button>
+<button onclick="M('contactm')">تواصل معنا</button>
+<button onclick="M('terms')">الشروط والأحكام</button>
+<button onclick="M('priv')">سياسة الخصوصية</button>
+</nav></div></header>
+
+<section class="hero" id="top">
+<div class="orb" style="width:300px;height:300px;background:#38bdf8;top:-60px;left:-60px"></div>
+<div class="orb" style="width:260px;height:260px;background:#7c3aed;bottom:-80px;right:10%"></div>
+<div class="w" style="position:relative">
+<h1>نبني حضورك الرقمي<br>ونتصدّر نتائج غوغل لمتجرك</h1>
+<p>فريق متخصص في السيو وإعلانات غوغل وMerchant Center وتصميم واجهات المتاجر. نحوّل زوار متجرك إلى طلبات حقيقية.</p>
+<div class="cta"><a class="btn" href="#contact">احصل على استشارة مجانية</a><a class="btn o" href="#seo">اكتشف خدماتنا</a></div>
+<div class="stats">
+<div class="stat"><b><span data-n="200">0</span>+</b>متجر اشتغلنا معه</div>
+<div class="stat"><b><span data-n="7">0</span></b>سنوات خبرة</div>
+<div class="stat"><b>👥</b>فريق متكامل</div>
+</div></div></section>
+
+<section id="seo"><div class="w grid2">
+<div>
+<h2>خدمات <span>السيو (SEO)</span></h2>
+<p class="lead">السيو هو أرخص وأدوم مصدر لزيارات متجرك. يقوم على ركيزتين: السيو التقني الذي يجعل موقعك سريعاً وسهل الفهرسة، وسيو المحتوى الذي يجعل صفحاتك تطابق ما يبحث عنه عميلك.</p>
+<p class="lead" style="margin-top:10px">حققنا أفضل النتائج خلال 7 سنوات في هذا التخصص، وهذا يساعدك على مضاعفة مبيعاتك <b>5x على الأقل خلال 6 أشهر</b>.</p>
+<span class="pill pulse">خبرة 6+ سنوات في السيو</span>
+</div>
+<div class="panel rv">
+<div class="tools"><span class="tag">Google Search Console</span><span class="tag s">Semrush</span><span class="tag">Analytics</span></div>
+<svg viewBox="0 0 300 90" width="100%"><path class="ln" d="M0 80 C40 70 60 75 90 50 S150 55 180 30 S250 25 300 6" fill="none" stroke="#059669" stroke-width="4" stroke-linecap="round"/></svg>
+<div class="bars"><i style="--h:20%"></i><i style="--h:32%"></i><i style="--h:30%"></i><i style="--h:48%"></i><i style="--h:60%"></i><i style="--h:72%"></i><i style="--h:100%"></i></div>
+<div class="kp"><div><b>+<span data-n="320">0</span>%</b>الزيارات</div><div><b>#<span data-n="1">0</span></b>الترتيب</div><div><b><span data-n="5">0</span>x</b>المبيعات</div></div>
+</div></div></section>
+
+<section id="ads"><div class="gl" style="top:20px;left:5%">G</div><div class="gl" style="bottom:10px;right:8%;animation-delay:-4s">Ads</div>
+<div class="w">
+<h2>إدارة حملات <span style="color:var(--blue)">Google Ads</span></h2>
+<p class="lead">نصمم ونحلل ونحسّن حملاتك الإعلانية يومياً، لنوصل إعلانك للعميل الجاهز للشراء ولا نهدر ميزانيتك.</p>
+<div class="cards rv">
+<div class="card"><b>$<span data-n="50">0</span>K+</b>ميزانية شهرية أدرناها</div>
+<div class="card"><b>$<span data-n="30">0</span>K+</b>أرباح شهرية حققناها</div>
+<div class="card"><b><span data-n="100">0</span>+</b>تاجر حققنا لهم نتائج مميزة</div>
+</div>
+<a class="btn" href="#contact">ابدأ حملتك الآن</a>
+</div></section>
+
+<section id="gmc"><div class="tagic" style="top:30px;left:6%">🏷️</div><div class="tagic" style="bottom:20px;right:6%;animation-delay:-3s">🛍️</div>
+<div class="w grid2"><div>
+<h2>Google Merchant Center</h2>
+<p class="lead">الأداة الأشهر والأقوى بين التجار لعرض منتجاتك في نتائج غوغل. مع إدارة الحملات الإعلانية تضمن مضاعفة مبيعاتك أكثر من 5x، وبزيادات شهرية تصل إلى أكثر من 60%.</p>
+<ul class="chk"><li>نحل مشاكل حساب Merchant لأي تاجر، وحللنا مشاكل أكثر من 200 متجر</li><li>نُنشئ حسابك من الصفر ونجهّزه للموافقة</li><li>خبرة 7 سنوات في الحسابات الموقوفة والتغذية</li></ul></div>
+<div class="panel rv" style="text-align:center;box-shadow:0 18px 50px #1d4ed822"><div style="font-size:90px;animation:sw 6s infinite">🏷️</div><b style="font-size:46px;color:var(--blue);direction:ltr;display:block">+<span data-n="60">0</span>%</b>نمو شهري في المبيعات</div>
+</div></section>
+
+<section id="css"><div class="w grid2"><div>
+<h2>تصميم واجهة المتجر بـ <span>CSS</span></h2>
+<p class="lead">الواجهة هي أول انطباع للعميل، وتؤثر مباشرة على قرار الشراء. واجهة سريعة ومرتبة تحسّن ترتيبك في محركات البحث، وتجذب العملاء، وترفع مبيعاتك القادمة من Merchant. لدينا معرض أعمال كبير في هذا المجال.</p>
+<div class="mets"><div><span>سرعة التحميل</span><em><u style="--w:96%"></u></em></div><div><span>تجربة الجوال</span><em><u style="--w:92%"></u></em></div><div><span>معدل التحويل</span><em><u style="--w:85%"></u></em></div></div>
+</div>
+<div class="mock rv"><div style="display:flex;gap:6px"><i style="width:12px;height:12px;border-radius:50%;background:#f87171"></i><i style="width:12px;height:12px;border-radius:50%;background:#fbbf24"></i><i style="width:12px;height:12px;border-radius:50%;background:#34d399"></i></div>
+<div class="bar"></div><div class="bar" style="animation-delay:-1s"></div><div class="bar" style="animation-delay:-2s"></div>
+<code style="direction:ltr;display:block;color:var(--css);font-weight:700;margin-top:8px">.store{ conversion: ↑ }</code></div>
+</div></section>
+
+<section id="clients"><div class="w" id="cl">
+<h2>المنصات والأدوات التي تتركز فيها خبراتنا</h2><p class="lead">نتقن العمل على أشهر منصات المتاجر وأدوات التسويق والتحليل.</p>
+<div class="mq"><div class="mt" id="mt"><div class="lg"><img src="data:image/png;base64,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" alt="salla"></div><div class="lg"><img src="data:image/png;base64,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" alt="zid"></div><div class="lg"><img src="data:image/png;base64,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" alt="wp"><span style="color:#21759b">WordPress</span></div><div class="lg"><img src="data:image/png;base64,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" alt="shop"></div><div class="lg"><img src="data:image/png;base64,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" alt="sem"><span style="color:#ff642d">Semrush</span></div><div class="lg"><svg viewBox="0 0 48 48" width="38" height="38"><path d="M17 33 L26 12" stroke="#fbbc04" stroke-width="10" stroke-linecap="round"/><path d="M26 12 L38 36" stroke="#4285f4" stroke-width="10" stroke-linecap="round"/><circle cx="11" cy="38" r="6" fill="#34a853"/></svg><span style="color:#1a56db">Google Ads</span></div><div class="lg"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAMAAACfWMssAAAAkFBMVEX////+/v/8/f/1+P3c5/vC1PartOB7pvNkm/Zkm/Vjm/ZclPNTkfVSk/lSkPVSj/VSj/RRj/VQj/VRjvRPjvVNjfVNjPVMi/VPh+xDge5NdtlYa8NAf+4/few+fOs+e+s+e+k/e+Y8fO0+eeY7eeo7d+ZQYLtKW7lHWblHWLlHWLhIV7ZFVrdDVbZEU7Q6TLPxp2OEAAACOUlEQVR42rXX7XaiMBAG4CQQQGVjrWhkCbaKFEur3P/ddQJ+AMkg9ey+Pzwc5XECwowQSnjy8csknFBCvOr0bU15PJb2T06VRwivyqK05VhWFbzYUpQVJ8kZcafC94sTIs8JSczPiiYclnPZNL/VCqs6CWGMJM32KPhd+p4OpxBeb/rw5kNY6DPWj1cVIyq6zNFhdZpN9/9WLD0jyDH28lkZ+ezvo+H569zNlyX9XeAC2Px9KhsS/HkqAZmsl09kPSHBar74dear4J/BsJ35eChkO5EYDaXP7/FCGY6DoeSdS9SdIbIHxXrKKNOiuTMYcZGafSgDaHuu7zu6+2mPSROCe5HKpw1EpQlhTzmLpowMS0tF6gRx7F0dJq3H6PDOqdVyHT6GZmzSCiljD+WoijY5EppyLGykeHBWURnN0YtcSJcwTPLWz2nCKSop29ylcT+GuKR0c5gL9EZGJSw1z9KlwHuOXYLL8ixPFwLtcrWklnr5LrtJa3u0yLoeuJu091VjtXeXZe9qoCGDdFqy5d4hMdTEOnkt6d3tWk5LfAS0JFxsWcfVNdHZEcpJs1rTbdNtvFhNsaHTSOiy7q7vIPHAtApl4OhmfnHXZWqmVBoPjDk4ThgfpgOWqv3LwHwMV3Ged9z26tR+MzRYRSji3OrUfjk8kcVrmt+WWbua1dDHZuBVXuBb2nLxfgIdQQzKSLVPi2qcOkC396R8xRMtInWAetvtvZ7aH+CPIjw+TMLhxGnczQweH34AwFrzL55x35wAAAAASUVORK5CYII=" alt="gmc"><span style="color:#3b6fd8">Merchant Center</span></div></div></div><script>var t=document.getElementById('mt');t.innerHTML+=t.innerHTML;</script>
+</div></section>
+
+<section id="contact"><div class="w" style="text-align:center">
+<h2>جاهز لمضاعفة مبيعاتك؟</h2><p class="lead" style="margin:auto">املأ النموذج وسنتواصل معك قريباً. جميع الحقول مطلوبة.</p>
+<form id="f" style="text-align:right">
+<label>الاسم الكامل</label><input name="n" required placeholder="مثال: أحمد محمد">
+<label>البريد الإلكتروني</label><input name="e" type="email" required placeholder="you@brand.com" style="direction:ltr">
+<label>رقم الواتساب</label><input name="w" type="tel" required placeholder="+966 5X XXX XXXX" style="direction:ltr">
+<label>رابط الموقع</label><input name="u" required placeholder="yourbrand.com" style="direction:ltr">
+<label>ما هي أكبر مشكلة تواجهك؟</label><textarea name="m" rows="3" required placeholder="مثال: حساب Merchant موقوف، نسبة تحويل منخفضة..."></textarea>
+<button class="btn" type="submit">احصل على استشارتك المجانية</button>
+<p class="note" id="nt">بياناتك سرية. نرد خلال يوم عمل واحد.</p></form>
+<div id="ty" style="display:none;background:#fff;border-radius:24px;padding:40px 28px;max-width:560px;margin:30px auto 0;text-align:center;box-shadow:0 20px 60px #0006;animation:pop .4s"><div style="width:70px;height:70px;border-radius:50%;background:#dcfce7;color:#16a34a;font-size:38px;display:grid;place-items:center;margin:0 auto 14px">✓</div><h3 style="font-size:26px;font-weight:900;color:var(--navy)">شكراً لك!</h3><p style="color:var(--mut);margin-top:6px">تم إرسال طلبك بنجاح، وسنرد عليك في أقرب وقت.</p></div>
+</div></section>
+
+<footer><div class="w">
+<div class="logo">MRP</div>
+<p style="margin-top:8px">نصمم حضورك الرقمي ونتصدر ترتيبك في غوغل</p>
+<div class="fl"><button onclick="M('about')">من نحن</button><button onclick="M('contactm')">تواصل معنا</button><button onclick="M('priv')">سياسة الخصوصية</button><button onclick="M('terms')">الشروط والأحكام</button></div>
+<small>© 2026 MRP. جميع الحقوق محفوظة.</small></div></footer>
+
+<a class="fab" href="https://wa.me/963993809946" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32" width="32" height="32" fill="#fff"><path d="M16.02 3C8.84 3 3 8.83 3 16c0 2.3.6 4.54 1.74 6.52L3 29l6.65-1.7A13 13 0 0 0 16.02 29C23.2 29 29 23.17 29 16S23.2 3 16.02 3zm0 23.8c-1.95 0-3.86-.53-5.53-1.52l-.4-.23-3.95 1.01 1.06-3.84-.26-.4A10.7 10.7 0 0 1 5.3 16c0-5.9 4.82-10.7 10.72-10.7S26.7 10.1 26.7 16 21.94 26.8 16.02 26.8zm5.87-8c-.32-.16-1.9-.94-2.2-1.04-.3-.1-.5-.16-.72.16-.22.32-.84 1.04-1.03 1.26-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.6-1.6-.96-.86-1.6-1.9-1.8-2.22-.18-.32-.02-.5.14-.66.15-.14.32-.38.48-.57.16-.19.22-.32.32-.54.11-.22.05-.4-.03-.57-.08-.16-.72-1.74-.99-2.38-.26-.62-.52-.54-.72-.55h-.6c-.22 0-.57.08-.86.4-.3.32-1.13 1.1-1.13 2.7s1.16 3.13 1.32 3.35c.16.22 2.28 3.48 5.52 4.88.77.33 1.37.53 1.84.68.77.25 1.48.21 2.03.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.14-.3-.22-.62-.38z"/></svg></a>
+
+<div class="ov" id="about"><div class="md"><button class="x" onclick="C()">✕</button><h3>من نحن</h3>
+<p>نحن فريق يعمل منذ 7 سنوات، يضم متخصصين محترفين في Google Merchant Center، ومتخصصين في تحسين محركات البحث SEO، ومتخصصين في تصميم واجهات المتاجر.</p>
+<p>نمتلك خبرة واسعة ومعرض أعمال كبيراً، وعملنا مع أكثر من 200 تاجر. هدفنا أن ننمّي مبيعات متجرك بخطوات واضحة وأرقام تقيسها بنفسك، وأن نلتزم في عملنا بسياسات غوغل وإرشاداتها.</p></div></div>
+
+<div class="ov" id="contactm"><div class="md"><button class="x" onclick="C()">✕</button><h3>تواصل معنا</h3>
+<p>رقم الهاتف: <b dir="ltr">+963 993 809 946</b></p>
+<p>أوقات العمل (بتوقيت السعودية): من السبت إلى الخميس، 10:00 صباحاً حتى 10:00 مساءً.</p>
+<p>اختر الطريقة الأنسب لك وسنرد عليك بأسرع وقت.</p>
+<div class="row"><a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/963993809946">واتساب</a><a class="btn ig" target="_blank" rel="noopener" href="https://www.instagram.com/mrprofit_marketing">انستغرام</a></div></div></div>
+
+<div class="ov" id="priv"><div class="md"><button class="x" onclick="C()">✕</button><h3>سياسة الخصوصية</h3>
+<p>نجمع فقط البيانات التي ترسلها لنا عبر النموذج (الاسم، البريد، رقم الواتساب، رابط الموقع)، ونستخدمها حصراً للتواصل معك وتقديم خدماتنا.</p>
+<p>لا نبيع بياناتك ولا نشاركها مع أي طرف ثالث، ونحميها بإجراءات معقولة. يمكنك طلب حذف بياناتك في أي وقت عبر التواصل معنا.</p>
+<p>قد يستخدم الموقع ملفات تعريف الارتباط لتحسين التجربة. باستخدامك للموقع فإنك توافق على هذه السياسة.</p></div></div>
+
+<div class="ov" id="terms"><div class="md"><button class="x" onclick="C()">✕</button><h3>الشروط والأحكام</h3>
+<p>تُقدَّم خدماتنا وفق الاتفاق المبرم مع كل عميل. النتائج تعتمد على عوامل كثيرة منها طبيعة المتجر والمنافسة وسياسات المنصات، لذلك لا نضمن ترتيباً أو مبيعات محددة.</p>
+<p>يلتزم العميل بتقديم معلومات صحيحة وصلاحيات الوصول اللازمة لحساباته، وميزانيات الإعلانات تُدفع مباشرة للمنصة الإعلانية. نحتفظ بحق تعديل هذه الشروط عند الحاجة.</p></div></div>
+
+<script>
+var $=function(s){return document.querySelector(s)};
+function M(id){C();$('#'+id).classList.add('on');$('#nv').classList.remove('on')}
+function C(){document.querySelectorAll('.ov').forEach(function(o){o.classList.remove('on')})}
+document.querySelectorAll('.ov').forEach(function(o){o.addEventListener('click',function(e){if(e.target===o)C()})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')C()});
+document.querySelectorAll('nav a').forEach(function(a){a.onclick=function(){$('#nv').classList.remove('on');$('#dd').classList.remove('open')}});
+function count(el){var t=+el.dataset.n,s=null;function st(ts){s=s||ts;var p=Math.min((ts-s)/1600,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(st)}requestAnimationFrame(st)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');e.target.querySelectorAll('[data-n]').forEach(count);io.unobserve(e.target)}})},{threshold:.25});
+document.querySelectorAll('section').forEach(function(s){io.observe(s)});
+$('#f').addEventListener('submit',function(e){e.preventDefault();var f=e.target,bt=f.querySelector('button'),nt=$('#nt');
+bt.disabled=true;bt.textContent='جاري الإرسال...';
+fetch('https://formsubmit.co/ajax/alyousef7ebrahem@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+body:JSON.stringify({'الاسم':f.n.value,'البريد':f.e.value,'واتساب':f.w.value,'الموقع':f.u.value,'المشكلة':f.m.value,_subject:'طلب استشارة جديد من '+f.n.value,_template:'table',_captcha:'false'})})
+.then(function(r){return r.json()}).then(function(d){
+if(d.success===true||d.success==='true'){f.style.display='none';$('#ty').style.display='block'}else{throw 0}})
+.catch(function(){bt.disabled=false;bt.textContent='احصل على استشارتك المجانية';nt.textContent='تعذّر الإرسال، حاول مرة ثانية أو تواصل معنا عبر واتساب.';nt.style.color='#dc2626'})});
+</script>
+</body>
+</html>
